@@ -1,0 +1,136 @@
+@use "../_base/global.scss" as *;
+
+.About__inner {
+  width: 87.5%;
+  margin: 0 auto;
+  margin-top: 70px;
+  @include lg() {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+.About__profile {
+  display: flex;
+  flex-direction: column;
+  @include md() {
+    justify-content: space-between;
+  }
+  @include lg() {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+.About__image {
+  border-radius: 7px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 340px;
+  object-fit: cover;
+  // background-color: #f9f9f9;
+  background-color: #f5f5f5;
+  @include md() {
+    max-height: 500px;
+  }
+  @include lg() {
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+.About__textWrap {
+  max-width: 500px;
+  margin-top: 30px;
+  @include md() {
+    margin-top: 40px;
+  }
+  @include lg() {
+    margin-top: 0;
+    max-width: 600px;
+  }
+}
+.About__title {
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  font-weight: 400;
+  @include md() {
+    font-size: 24px;
+  }
+  @include lg() {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+}
+
+.About__text {
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  span {
+    font-weight: 700;
+  }
+  @include md() {
+    font-size: 17px;
+  }
+}
+
+.About__text .-otherPcBlock {
+  display: block;
+  @include lg() {
+    display: none;
+  }
+}
+
+.About__skills {
+  margin-top: 100px;
+  max-width: 500px;
+  @include lg() {
+    max-width: 100%;
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
+}
+
+.About__skillsList {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 50px;
+  @include lg() {
+    grid-template-columns: 1fr 1fr;
+    column-gap:120px;
+  }
+}
+
+.About__skillsTitle {
+  font-size: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+  letter-spacing: 0.03em;
+  position: relative;
+  font-weight: 700;
+  @include lg() {
+    font-size: 42px;
+    letter-spacing: 0.01em;
+  }
+  span {
+    position: absolute;
+    font-size: 14px;
+    bottom: 4px;
+    margin-left: 30px;
+    font-weight: 400;
+    @include lg() {
+      font-size: 16px;
+    }
+  }
+  
+}
+
+.About__skillsText {
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  margin-top: 7px;
+  @include lg() {
+    font-size: 18px;
+  }
+}

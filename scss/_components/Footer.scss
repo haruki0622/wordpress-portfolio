@@ -1,0 +1,25 @@
+@use "../_base/global.scss" as *;
+
+.Footer__inner {
+  padding: 30px 16px;
+  @include lg() {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+.Footer__logo {
+  width: 84px;
+  @include lg() {
+    width: 100px;
+  }
+}
+.Footer__text {
+  // text-align: center;
+  letter-spacing: 0.03em;
+  // font-weight: 500;
+  font-size: 14px;
+  @include lg() {
+    font-size: 18px;
+    // margin-top: 10px;
+  }
+}

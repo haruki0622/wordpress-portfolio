@@ -1,0 +1,16 @@
+// riset.scss
+@use "../node_modules/destyle.css/destyle.css";
+
+// base.css
+@use "../scss/_base/base.scss";
+
+// conmponents
+@use "./_components/Container.scss";
+@use "./_components/Header.scss";
+@use "./_components/Kv.scss";
+@use "./_components/Features.scss";
+@use "./_components/Works.scss";
+@use "./_components/Contact.scss";
+@use "./_components/Footer.scss";
+@use "./_components/Post.scss";
+@use "./_components/About.scss";

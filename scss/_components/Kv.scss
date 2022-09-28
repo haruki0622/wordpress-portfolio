@@ -1,0 +1,74 @@
+@use "../_base/global.scss" as *;
+
+.Kv__inner {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  width: 87.5%;
+  margin: 0 auto;
+  margin-top: 50px;
+  @include lg() {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 100px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+.Kv__mainTitle {
+  margin-top: 50px;
+}
+.Kv__title {
+  @include main-title(#e7e7e7, #e7e7e7);
+  span {
+    filter: grayscale(60%);
+  }
+  @include md {
+    font-size: 62px;
+    line-height: 1.5;
+  }
+}
+
+.Kv__title .-smIsBlock {
+  display: block;
+  @include lg() {
+    display: none;
+  }
+}
+
+.Kv__text {
+  @include sub-text();
+  margin-top: 40px;
+  max-width: 500px;
+}
+
+.Kv__link {
+  @include more-detail();
+  margin: 20px 0;
+}
+
+// .Kv__imageWrap {
+  
+//   @include lg() {
+//     // padding-top: 50px;
+//     // padding-left: 50px;
+//     // padding-right: 50px;
+//   }
+// }
+.Kv__image {
+  max-height: 45vh;
+  object-fit: cover;
+  background-color: #f9f9f9;
+  width: 100%;
+  border-radius: 7px;
+  // max-width: 400px;
+  @include md() {
+    max-width: 300px;
+  }
+  @include lg() {
+    max-width: 400px;
+    max-height: 100vh;
+  }
+}

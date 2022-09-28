@@ -1,0 +1,110 @@
+/*
+変数やmixinを定義する。
+mixinは別ブロックでも使用するcssを定義する
+変数名は色の名前にする
+*/
+
+// google fonts
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap");
+
+// 変数
+$alabaster: #9c8585;
+$denim: #127ce5;
+$shark: #242425;
+
+// ブレイクポイント
+$md: 600px;
+$lg: 1024px;
+
+@mixin md() {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin column-divide($max-width) {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 87.5%;
+  margin: 0 auto;
+  @include lg() {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+}
+
+@mixin main-title($left, $right) {
+  font-size: clamp(42px, 4vw, 62px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  span {
+    background: linear-gradient(to right, $left, $right);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  @include lg() {
+    line-height: 1.4;
+  }
+}
+
+@mixin sub-text() {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  @include md() {
+    font-size: 18px;
+  }
+}
+
+@mixin more-detail() {
+  color: $denim;
+  font-size: 16px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 15px;
+  img {
+    width: 7px;
+  }
+  @include md() {
+    font-size: 18px;
+    font-weight: 500;
+    img {
+      width: 10px;
+    }
+  }
+}
+
+// @mixin skills-text() {
+//   font-size: 24px;
+//   padding-bottom: 10px;
+//   border-bottom: 1px solid lightgray;
+//   letter-spacing: 0.06em;
+//   position: relative;
+//   font-weight: 700;
+//   &::after {
+//     @content;
+//     position: absolute;
+//     font-size: 14px;
+//     bottom: 4px;
+//     margin-left: 30px;
+//     font-weight: 400;
+//     color: red;
+//   }
+// }
