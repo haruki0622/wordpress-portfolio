@@ -49,7 +49,7 @@ $lg: 1024px;
 @mixin main-title($left, $right) {
   font-size: clamp(42px, 4vw, 62px);
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.3;
   letter-spacing: 0.03em;
   span {
     background: linear-gradient(to right, $left, $right);

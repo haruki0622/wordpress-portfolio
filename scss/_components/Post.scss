@@ -25,6 +25,7 @@
   img {
     // max-width: 740px;
     max-height: 60vh;
+    height:auto;
     @include lg() {
       max-height: 80vh;
     }
